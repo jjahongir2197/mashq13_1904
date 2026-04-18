@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Foydalanuvchilar{% endblock %}
+{% block content %}
+    <h1>Barcha foydalanuvchilar</h1>
+    <table border="1">
+        <tr><th>ID</th><th>Ism</th><th>Yosh</th><th>Shahar</th></tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.city }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
